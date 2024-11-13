@@ -5,7 +5,7 @@ void MergeSort::Scalanie_Dzielenie(std::vector<int>& tab, int lewo, int prawo) {
 	if (lewo < prawo) {
 		int srodek = lewo + (prawo - lewo) / 2;
 
-		Scalanie_Dzielenie(tab, lewo, prawo);
+		Scalanie_Dzielenie(tab, lewo, srodek);
 		Scalanie_Dzielenie(tab, srodek + 1, prawo);
 
 		Scalanie_Scalanie(tab, lewo, srodek, prawo);
@@ -54,6 +54,8 @@ void MergeSort::Scalanie_Scalanie(std::vector<int>& tab, int lewo, int srodek, i
 }
 
 void MergeSort::Scalanie_Sortowanie(std::vector<int>& tab) {
-
+	if (!tab.empty()) {
+		Scalanie_Dzielenie(tab, 0, tab.size() - 1);
+	}
 }
 
