@@ -48,7 +48,7 @@ void MergeSort::Scalanie_Scalanie(std::vector<int>& tab, int lewo, int srodek, i
 	}
 
 	while (j < t2) {
-		tab[k] = prawatab[j];	// <-- Kopiowanie pozosta³ych elementów z prawej tablicy 
+		tab[k] = prawatab[j];	// <-- Kopiowanie pozosta³ych elementów z prawej tablicy.
 		j++;
 		k++;
 	}
