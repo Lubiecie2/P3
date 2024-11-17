@@ -1,14 +1,15 @@
 #include "Scalanie.h"
 
-void MergeSort::Scalanie_Dzielenie(std::vector<int>& tab, int lewo, int prawo) {
+void MergeSort::Scalanie_Dzielenie(std::vector<int>& tab, int lewo, int prawo) {  // <-- Funkcja jest odpowiedzialana za rekursywne dzielenie tablicy 
 
-	if (lewo < prawo) {
-		int srodek = lewo + (prawo - lewo) / 2;
+	if (lewo < prawo) {									
+		int srodek = lewo + (prawo - lewo) / 2;		// <-- Tablica jest dzielona na dwie czêœci 
+		
+		Scalanie_Dzielenie(tab, lewo, srodek);		    // <-- Rekursywnie jest dzielona lewa czêœæ tablicy
 
-		Scalanie_Dzielenie(tab, lewo, srodek);
-		Scalanie_Dzielenie(tab, srodek + 1, prawo);
+		Scalanie_Dzielenie(tab, srodek + 1, prawo);		// <-- Rekursywnie jest dzielona prawa czêœæ tablicy 
 
-		Scalanie_Scalanie(tab, lewo, srodek, prawo);
+		Scalanie_Scalanie(tab, lewo, srodek, prawo);	// <-- Wywo³ywana jest funkcja która dzieli dwie posortowane czêœci 
 	}
 }
 
@@ -53,9 +54,9 @@ void MergeSort::Scalanie_Scalanie(std::vector<int>& tab, int lewo, int srodek, i
 	}
 }
 
-void MergeSort::Scalanie_Sortowanie(std::vector<int>& tab) {
-	if (!tab.empty()) {
-		Scalanie_Dzielenie(tab, 0, tab.size() - 1);
-	}
+void MergeSort::Scalanie_Sortowanie(std::vector<int>& tab) {   // <-- Funkcja jest odpowiedzialna za wywo³anie g³ównego procesu sortowania przez scalanie
+	if (!tab.empty()) {										   // <-- Sprawdzamy czy tablica nie jest pusta
+		Scalanie_Dzielenie(tab, 0, tab.size() - 1);			   // <-- Jeœli zawiera elementy, wywo³ujemy funkcje która dzieli tablice na mniejsze czêœci,
+	}														   //     a¿ do momentu osi¹gniêcia wartoœci pojedycznych 
 }
 
