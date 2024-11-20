@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <vector>
 #include "Scalanie.h"
+#include <gtest/gtest.h>
 
 int main()
 {
