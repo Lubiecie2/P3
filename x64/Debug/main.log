@@ -1,5 +1,2 @@
-﻿  Scalanie.cpp
-C:\Users\kgruc\OneDrive\Pulpit\ProjektZ3\main\main\Scalanie.cpp(59,41): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
-  main.cpp
-  Generowanie kodu...
+﻿  main.cpp
   main.vcxproj -> C:\Users\kgruc\OneDrive\Pulpit\ProjektZ3\main\x64\Debug\main.exe
