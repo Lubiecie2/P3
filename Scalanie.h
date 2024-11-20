@@ -2,28 +2,28 @@
 #include <gtest/gtest.h>
 #include <vector>
 
-/// Klasa implementuj¹ca algorytm sortowania przez scalanie (MergeSort)
-/// @brief Klasa implementuje algorytm sortowania przez scalanie (MergeSort) dla wektora liczb ca³kowitych.
+/// Klasa implementujaca algorytm sortowania przez scalanie (MergeSort)
+/// @brief Klasa implementuje algorytm sortowania przez scalanie (MergeSort) dla wektora liczb calkowitych.
 class MergeSort {
 
 public:
-    /// Funkcja g³ówna do sortowania wektora za pomoc¹ algorytmu MergeSort.
-    /// @param tab Wektor liczb ca³kowitych, który ma zostaæ posortowany.
-    /// @brief Sortuje przekazany wektor w porz¹dku rosn¹cym.
+    /// Funkcja glowna do sortowania wektora za pomoca algorytmu MergeSort.
+    /// @param tab Wektor liczb calkowitych, ktory ma zostac posortowany.
+    /// @brief Sortuje przekazany wektor w porzadku rosnacym.
     void Scalanie_Sortowanie(std::vector<int>& tab);
 
-    /// Funkcja pomocnicza dziel¹ca wektor na dwie czêœci w celu ich rekurencyjnego posortowania.
-    /// @param tab Wektor liczb ca³kowitych, który ma zostaæ podzielony.
-    /// @param lewo Indeks pocz¹tkowy (lewy).
-    /// @param prawo Indeks koñcowy (prawy).
-    /// @brief Dzieli wektor na dwie czêœci i wywo³uje rekurencyjnie sortowanie dla obu czêœci.
+    /// Funkcja pomocnicza dzielaca wektor na dwie czesci w celu ich rekurencyjnego posortowania.
+    /// @param tab Wektor liczb calkowitych, ktory ma zostac podzielony.
+    /// @param lewo Indeks poczatkowy (lewy).
+    /// @param prawo Indeks koncowy (prawy).
+    /// @brief Dzieli wektor na dwie czesci i wywoluje rekurencyjnie sortowanie dla obu czesci.
     void Scalanie_Dzielenie(std::vector<int>& tab, int lewo, int prawo);
 
-    /// Funkcja ³¹cz¹ca posortowane czêœci wektora w jedn¹ ca³oœæ.
-    /// @param tab Wektor liczb ca³kowitych, który ma zostaæ scalony.
-    /// @param lewo Indeks pocz¹tkowy (lewy).
-    /// @param srodek Indeks œrodkowy.
-    /// @param prawo Indeks koñcowy (prawy).
-    /// @brief Scalanie dwóch posortowanych czêœci wektora w jeden posortowany fragment.
+    /// Funkcja laczaca posortowane czesci wektora w jedna calosc.
+    /// @param tab Wektor liczb calkowitych, ktory ma zostac scalony.
+    /// @param lewo Indeks poczatkowy (lewy).
+    /// @param srodek Indeks srodkowy.
+    /// @param prawo Indeks koncowy (prawy).
+    /// @brief Scalanie dwoch posortowanych czesci wektora w jeden posortowany fragment.
     void Scalanie_Scalanie(std::vector<int>& tab, int lewo, int srodek, int prawo);
 };
