@@ -1,15 +1,15 @@
 #include "Scalanie.h"
 
-void MergeSort::Scalanie_Dzielenie(std::vector<int>& tab, int lewo, int prawo) {  // <-- Funkcja jest odpowiedzialana za rekursywne dzielenie tablicy 
+void MergeSort::Scalanie_Dzielenie(std::vector<int>& tab, int lewo, int prawo) {  // <-- Funkcja jest odpowiedzialana za rekurencyjne dzielenie tablicy 
 
 	if (lewo < prawo) {									
 		int srodek = lewo + (prawo - lewo) / 2;			// <-- Tablica jest dzielona na dwie czêœci 
 		
-		Scalanie_Dzielenie(tab, lewo, srodek);		    // <-- Rekursywnie jest dzielona lewa czêœæ tablicy
+		Scalanie_Dzielenie(tab, lewo, srodek);		    // <-- Rekurencyjnie jest dzielona lewa czêœæ tablicy
 
-		Scalanie_Dzielenie(tab, srodek + 1, prawo);		// <-- Rekursywnie jest dzielona prawa czêœæ tablicy 
+		Scalanie_Dzielenie(tab, srodek + 1, prawo);		// <-- Rekurencyjnie jest dzielona prawa czêœæ tablicy 
 
-		Scalanie_Scalanie(tab, lewo, srodek, prawo);	// <-- Wywo³ywana jest funkcja która dzieli dwie posortowane czêœæ 
+		Scalanie_Scalanie(tab, lewo, srodek, prawo);	// <-- Wywo³ywana jest funkcja która scala dwie posortowane czêœæ 
 	}
 }
 
